@@ -1,6 +1,12 @@
-export default {
+import type { NuxtConfig } from '@nuxt/types'
+
+const config: NuxtConfig = {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
+
+  serverMiddleware: [
+    '~/api/index.ts'
+  ],
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -61,3 +67,5 @@ export default {
   build: {
   }
 }
+
+export default config
